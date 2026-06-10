@@ -1,13 +1,20 @@
-import {Injectable, Logger, OnModuleDestroy, OnModuleInit} from '@nestjs/common';
+import {Injectable, Logger,type OnModuleDestroy,type OnModuleInit} from '@nestjs/common';
 import {PrismaClient} from "../../../prisma/generated/client.js";
 import {PrismaPg} from "@prisma/adapter-pg";
+import {ConfigService} from "@nestjs/config";
 
 @Injectable()
 export class PrismaService  extends PrismaClient implements OnModuleInit,OnModuleDestroy{
 
 
-    public constructor() {
-        const adapter = new PrismaPg(process.env.POSTGRES_URI!)
+    public constructor(private readonly configService: ConfigService) {
+        const adapter = new PrismaPg({
+            user: configService.getOrThrow<string>('POSTGRES_USER'),
+            password:configService.getOrThrow<string>('POSTGRES_PASSWORD'),
+            host:configService.getOrThrow<string>('POSTGRES_HOST'),
+            port:configService.getOrThrow<number>('POSTGRES_PORT'),
+            database:configService.getOrThrow<string>('POSTGRES_DATABASE'),
+        })
 
         super({adapter})
     }
