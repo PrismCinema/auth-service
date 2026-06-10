@@ -33,6 +33,7 @@
     "@prismcinema/contracts": "^1.0.0",
     "@prismcinema/core": "^1.0.3",
     "ioredis": "^5.11.1",
+    "patcode": "^1.0.1",
     "prisma": "^7.8.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
