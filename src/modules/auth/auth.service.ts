@@ -65,5 +65,7 @@ export class AuthService {
         isPhoneVerified: true,
       });
     }
+
+    return { accessToken: "123456", refreshToken: "123456" };
   }
 }
