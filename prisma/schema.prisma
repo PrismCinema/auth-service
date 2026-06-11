@@ -16,7 +16,7 @@ model Account {
   email String? @unique
 
   isPhoneVerified Boolean @default(false) @map("is_phone_verified")
-  isEmail Boolean @default(false) @map("is_email_verified")
+  isEmailVerified Boolean @default(false) @map("is_email_verified")
 
 
 

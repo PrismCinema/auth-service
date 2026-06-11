@@ -522,7 +522,7 @@ export const AccountScalarFieldEnum = {
   phone: 'phone',
   email: 'email',
   isPhoneVerified: 'isPhoneVerified',
-  isEmail: 'isEmail',
+  isEmailVerified: 'isEmailVerified',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 } as const

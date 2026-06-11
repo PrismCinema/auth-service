@@ -29,7 +29,7 @@ export type AccountMinAggregateOutputType = {
   phone: string | null
   email: string | null
   isPhoneVerified: boolean | null
-  isEmail: boolean | null
+  isEmailVerified: boolean | null
   createdAt: Date | null
   updatedAt: Date | null
 }
@@ -39,7 +39,7 @@ export type AccountMaxAggregateOutputType = {
   phone: string | null
   email: string | null
   isPhoneVerified: boolean | null
-  isEmail: boolean | null
+  isEmailVerified: boolean | null
   createdAt: Date | null
   updatedAt: Date | null
 }
@@ -49,7 +49,7 @@ export type AccountCountAggregateOutputType = {
   phone: number
   email: number
   isPhoneVerified: number
-  isEmail: number
+  isEmailVerified: number
   createdAt: number
   updatedAt: number
   _all: number
@@ -61,7 +61,7 @@ export type AccountMinAggregateInputType = {
   phone?: true
   email?: true
   isPhoneVerified?: true
-  isEmail?: true
+  isEmailVerified?: true
   createdAt?: true
   updatedAt?: true
 }
@@ -71,7 +71,7 @@ export type AccountMaxAggregateInputType = {
   phone?: true
   email?: true
   isPhoneVerified?: true
-  isEmail?: true
+  isEmailVerified?: true
   createdAt?: true
   updatedAt?: true
 }
@@ -81,7 +81,7 @@ export type AccountCountAggregateInputType = {
   phone?: true
   email?: true
   isPhoneVerified?: true
-  isEmail?: true
+  isEmailVerified?: true
   createdAt?: true
   updatedAt?: true
   _all?: true
@@ -164,7 +164,7 @@ export type AccountGroupByOutputType = {
   phone: string | null
   email: string | null
   isPhoneVerified: boolean
-  isEmail: boolean
+  isEmailVerified: boolean
   createdAt: Date
   updatedAt: Date
   _count: AccountCountAggregateOutputType | null
@@ -195,7 +195,7 @@ export type AccountWhereInput = {
   phone?: Prisma.StringNullableFilter<"Account"> | string | null
   email?: Prisma.StringNullableFilter<"Account"> | string | null
   isPhoneVerified?: Prisma.BoolFilter<"Account"> | boolean
-  isEmail?: Prisma.BoolFilter<"Account"> | boolean
+  isEmailVerified?: Prisma.BoolFilter<"Account"> | boolean
   createdAt?: Prisma.DateTimeFilter<"Account"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Account"> | Date | string
 }
@@ -205,7 +205,7 @@ export type AccountOrderByWithRelationInput = {
   phone?: Prisma.SortOrderInput | Prisma.SortOrder
   email?: Prisma.SortOrderInput | Prisma.SortOrder
   isPhoneVerified?: Prisma.SortOrder
-  isEmail?: Prisma.SortOrder
+  isEmailVerified?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
@@ -218,7 +218,7 @@ export type AccountWhereUniqueInput = Prisma.AtLeast<{
   OR?: Prisma.AccountWhereInput[]
   NOT?: Prisma.AccountWhereInput | Prisma.AccountWhereInput[]
   isPhoneVerified?: Prisma.BoolFilter<"Account"> | boolean
-  isEmail?: Prisma.BoolFilter<"Account"> | boolean
+  isEmailVerified?: Prisma.BoolFilter<"Account"> | boolean
   createdAt?: Prisma.DateTimeFilter<"Account"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Account"> | Date | string
 }, "id" | "phone" | "email">
@@ -228,7 +228,7 @@ export type AccountOrderByWithAggregationInput = {
   phone?: Prisma.SortOrderInput | Prisma.SortOrder
   email?: Prisma.SortOrderInput | Prisma.SortOrder
   isPhoneVerified?: Prisma.SortOrder
-  isEmail?: Prisma.SortOrder
+  isEmailVerified?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
   _count?: Prisma.AccountCountOrderByAggregateInput
@@ -244,7 +244,7 @@ export type AccountScalarWhereWithAggregatesInput = {
   phone?: Prisma.StringNullableWithAggregatesFilter<"Account"> | string | null
   email?: Prisma.StringNullableWithAggregatesFilter<"Account"> | string | null
   isPhoneVerified?: Prisma.BoolWithAggregatesFilter<"Account"> | boolean
-  isEmail?: Prisma.BoolWithAggregatesFilter<"Account"> | boolean
+  isEmailVerified?: Prisma.BoolWithAggregatesFilter<"Account"> | boolean
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Account"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Account"> | Date | string
 }
@@ -254,7 +254,7 @@ export type AccountCreateInput = {
   phone?: string | null
   email?: string | null
   isPhoneVerified?: boolean
-  isEmail?: boolean
+  isEmailVerified?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
 }
@@ -264,7 +264,7 @@ export type AccountUncheckedCreateInput = {
   phone?: string | null
   email?: string | null
   isPhoneVerified?: boolean
-  isEmail?: boolean
+  isEmailVerified?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
 }
@@ -274,7 +274,7 @@ export type AccountUpdateInput = {
   phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   isPhoneVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isEmail?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isEmailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -284,7 +284,7 @@ export type AccountUncheckedUpdateInput = {
   phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   isPhoneVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isEmail?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isEmailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -294,7 +294,7 @@ export type AccountCreateManyInput = {
   phone?: string | null
   email?: string | null
   isPhoneVerified?: boolean
-  isEmail?: boolean
+  isEmailVerified?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
 }
@@ -304,7 +304,7 @@ export type AccountUpdateManyMutationInput = {
   phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   isPhoneVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isEmail?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isEmailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -314,7 +314,7 @@ export type AccountUncheckedUpdateManyInput = {
   phone?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   email?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   isPhoneVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isEmail?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isEmailVerified?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -324,7 +324,7 @@ export type AccountCountOrderByAggregateInput = {
   phone?: Prisma.SortOrder
   email?: Prisma.SortOrder
   isPhoneVerified?: Prisma.SortOrder
-  isEmail?: Prisma.SortOrder
+  isEmailVerified?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
@@ -334,7 +334,7 @@ export type AccountMaxOrderByAggregateInput = {
   phone?: Prisma.SortOrder
   email?: Prisma.SortOrder
   isPhoneVerified?: Prisma.SortOrder
-  isEmail?: Prisma.SortOrder
+  isEmailVerified?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
@@ -344,7 +344,7 @@ export type AccountMinOrderByAggregateInput = {
   phone?: Prisma.SortOrder
   email?: Prisma.SortOrder
   isPhoneVerified?: Prisma.SortOrder
-  isEmail?: Prisma.SortOrder
+  isEmailVerified?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
 }
@@ -372,7 +372,7 @@ export type AccountSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   phone?: boolean
   email?: boolean
   isPhoneVerified?: boolean
-  isEmail?: boolean
+  isEmailVerified?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }, ExtArgs["result"]["account"]>
@@ -382,7 +382,7 @@ export type AccountSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exten
   phone?: boolean
   email?: boolean
   isPhoneVerified?: boolean
-  isEmail?: boolean
+  isEmailVerified?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }, ExtArgs["result"]["account"]>
@@ -392,7 +392,7 @@ export type AccountSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exten
   phone?: boolean
   email?: boolean
   isPhoneVerified?: boolean
-  isEmail?: boolean
+  isEmailVerified?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }, ExtArgs["result"]["account"]>
@@ -402,12 +402,12 @@ export type AccountSelectScalar = {
   phone?: boolean
   email?: boolean
   isPhoneVerified?: boolean
-  isEmail?: boolean
+  isEmailVerified?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }
 
-export type AccountOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "phone" | "email" | "isPhoneVerified" | "isEmail" | "createdAt" | "updatedAt", ExtArgs["result"]["account"]>
+export type AccountOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "phone" | "email" | "isPhoneVerified" | "isEmailVerified" | "createdAt" | "updatedAt", ExtArgs["result"]["account"]>
 
 export type $AccountPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Account"
@@ -417,7 +417,7 @@ export type $AccountPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     phone: string | null
     email: string | null
     isPhoneVerified: boolean
-    isEmail: boolean
+    isEmailVerified: boolean
     createdAt: Date
     updatedAt: Date
   }, ExtArgs["result"]["account"]>
@@ -847,7 +847,7 @@ export interface AccountFieldRefs {
   readonly phone: Prisma.FieldRef<"Account", 'String'>
   readonly email: Prisma.FieldRef<"Account", 'String'>
   readonly isPhoneVerified: Prisma.FieldRef<"Account", 'Boolean'>
-  readonly isEmail: Prisma.FieldRef<"Account", 'Boolean'>
+  readonly isEmailVerified: Prisma.FieldRef<"Account", 'Boolean'>
   readonly createdAt: Prisma.FieldRef<"Account", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"Account", 'DateTime'>
 }

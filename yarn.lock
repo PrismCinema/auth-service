@@ -1231,10 +1231,10 @@
     "@radix-ui/react-toggle" "1.1.10"
     chart.js "4.5.1"
 
-"@prismcinema/contracts@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@prismcinema/contracts/-/contracts-1.0.0.tgz#8a2ea7880eaa383bf6da9ac7dbc5df20d8748914"
-  integrity sha512-F2QFoS2XGWYLGuOBCdc/g7Ib7hdf4sySo1u8elxMeS8AK6OOoa8+gryZp1goPhVjW6SP3NxbDcmOoIAsDA4OUA==
+"@prismcinema/contracts@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@prismcinema/contracts/-/contracts-1.0.1.tgz#ec8f868fdf18557a97c50adfd6fde32ee74d469f"
+  integrity sha512-/R3L/s+Pft9RRLAst9KNZ/yygwf41/HgsF3Ph+H1WjCnmeCffUdNMGINYxU9dAHOFmAsZgN2Sef6gBZoYC3wIQ==
   dependencies:
     "@nestjs/microservices" "^11.1.24"
     rxjs "^7.8.2"
