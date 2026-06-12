@@ -1236,10 +1236,10 @@
   resolved "https://registry.yarnpkg.com/@prismcinema/common/-/common-1.0.0.tgz#bd4c334fc2b1c6f711650f8b4a196c42b7eea9a8"
   integrity sha512-C1Xlh2i3zjQZuDVWw2idpvOXOf/HiTRZStYobZMB5Y8tUMg2ObuU0f+qsfZIu3b1D/J/BceWvIA0a7LHyhpRIQ==
 
-"@prismcinema/contracts@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@prismcinema/contracts/-/contracts-1.0.1.tgz#ec8f868fdf18557a97c50adfd6fde32ee74d469f"
-  integrity sha512-/R3L/s+Pft9RRLAst9KNZ/yygwf41/HgsF3Ph+H1WjCnmeCffUdNMGINYxU9dAHOFmAsZgN2Sef6gBZoYC3wIQ==
+"@prismcinema/contracts@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@prismcinema/contracts/-/contracts-1.0.5.tgz#271aeb26a75aa16f51b3d0dd658dd2dfa66aeb7f"
+  integrity sha512-Yl0WbKjvhJexoSiRHlrgZT3pGvYzSnTgIAuw9pTs/xVzyn59xf1g2/l/Azk5RkFode3Ib5LlpgARmn5+0Abd2w==
   dependencies:
     "@nestjs/microservices" "^11.1.24"
     rxjs "^7.8.2"
@@ -1575,12 +1575,12 @@
   dependencies:
     undici-types ">=7.24.0 <7.24.7"
 
-"@types/node@^24.0.0":
-  version "24.13.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.13.1.tgz#890e6a3832959d8181a11c4c91c3a0de8410e697"
-  integrity sha512-RSpUJGmvsJ1ZeBehQZFhIdpsz+bIpES0nIQXko4Ybq+N+kX6XvOq3Jo+iJ82FWLdblFq85AsMikd3m35jgezYg==
+"@types/node@^25.9.3":
+  version "25.9.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.9.3.tgz#11dfe7a33e68fa5c560f0aa76cc5595621ef26b9"
+  integrity sha512-603BddQMv3pUcr4U2dhujk83N2tTDVr/34wII2B6bJy6g+8WD6yUb11jszNs0gdi4PesVWl7ABt8nYMVpnLUcg==
   dependencies:
-    undici-types "~7.18.0"
+    undici-types ">=7.24.0 <7.24.7"
 
 "@types/pg@^8.16.0":
   version "8.20.0"
@@ -5658,11 +5658,6 @@ uint8array-extras@^1.4.0:
   version "7.24.6"
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.24.6.tgz#61275b485d7fd4e9d269c7cf04ec2873c9cc0f91"
   integrity sha512-WRNW+sJgj5OBN4/0JpHFqtqzhpbnV0GuB+OozA9gCL7a993SmU+1JBZCzLNxYsbMfIeDL+lTsphD5jN5N+n0zg==
-
-undici-types@~7.18.0:
-  version "7.18.2"
-  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.18.2.tgz#29357a89e7b7ca4aef3bf0fd3fd0cd73884229e9"
-  integrity sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==
 
 universalify@^2.0.0:
   version "2.0.1"

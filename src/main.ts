@@ -3,6 +3,7 @@ import { AppModule } from "./app.module";
 import { MicroserviceOptions, Transport } from "@nestjs/microservices";
 import { ConfigService } from "@nestjs/config";
 import type { AllConfigs } from "@/config";
+import { PROTO_PATHS } from "@prismcinema/contracts";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -18,7 +19,8 @@ async function bootstrap() {
     transport: Transport.GRPC,
     options: {
       package: "auth.v1",
-      protoPath: "node_modules/@prismcinema/contracts/proto/auth.proto",
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      protoPath: PROTO_PATHS.AUTH,
       url,
       logging: {
         keepCase: false,
