@@ -3,6 +3,7 @@ import { RedisService } from "@/infrastructure/redis/redis.service";
 import { createHash } from "node:crypto";
 import { generateCode } from "patcode";
 import { RpcException } from "@nestjs/microservices";
+import { RpcStatus } from "@prismcinema/common/dist";
 @Injectable()
 export class OtpService {
   public constructor(private readonly redisService: RedisService) {}
@@ -26,7 +27,7 @@ export class OtpService {
 
     if (!storedHash) {
       throw new RpcException({
-        code: 5,
+        code: RpcStatus.NOT_FOUND,
         details: "Invalid or expired code",
       });
     }
@@ -35,7 +36,7 @@ export class OtpService {
 
     if (storedHash !== incomingHash) {
       throw new RpcException({
-        code: 5,
+        code: RpcStatus.NOT_FOUND,
         details: "Invalid or expired code",
       });
     }
